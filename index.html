@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flish Labs - Aditi</title>
-  <link rel="icon" type="image/png" href="fl.png" />
+  <link rel="icon" type="image/png" href="fl.png" /> <!-- your favicon -->
   <style>
     body {
       margin: 0;
@@ -20,8 +20,6 @@
       background: rgba(0, 0, 0, 0.2);
       position: sticky;
       top: 0;
-      transition: top 0.3s ease, opacity 0.3s ease;
-      z-index: 1000;
     }
 
     h1 {
@@ -135,8 +133,8 @@
     <h2>📬 Contact</h2>
     <p>
       Connect with me: 
-      <a href="https://github.com/Adisha2" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/aditi-mishra-590055343/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/your-username" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a> |
       <a href="mailto:your@email.com">Email</a>
     </p>
   </section>
@@ -144,29 +142,9 @@
   <footer>
     <p>© 2025 Flish Labs - Aditi</p>
   </footer>
-
-  <script>
-    let lastScrollTop = 0;
-    const header = document.querySelector('header');
-
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        // scrolling down
-        header.style.opacity = '0';
-        header.style.pointerEvents = 'none';
-      } else {
-        // scrolling up
-        header.style.opacity = '1';
-        header.style.pointerEvents = 'auto';
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-  </script>
 </body>
 </html>
+
 
 
 
