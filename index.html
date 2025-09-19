@@ -20,6 +20,8 @@
       background: rgba(0, 0, 0, 0.2);
       position: sticky;
       top: 0;
+      transition: top 0.3s ease, opacity 0.3s ease;
+      z-index: 1000;
     }
 
     h1 {
@@ -76,6 +78,8 @@
     a:hover {
       text-decoration: underline;
     }
+
+    
   </style>
 </head>
 <body>
@@ -142,6 +146,27 @@
   <footer>
     <p>© 2025 Flish Labs - Aditi</p>
   </footer>
+    
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // scrolling down
+        header.style.opacity = '0';
+        header.style.pointerEvents = 'none';
+      } else {
+        // scrolling up
+        header.style.opacity = '1';
+        header.style.pointerEvents = 'auto';
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
 </body>
 </html>
 
