@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flish</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      background: #fff;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      background: #ffeb3b;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+    }
+
+    #features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 12px;
+      max-width: 250px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Flish</h1>
+    <p>Fast. Fresh. Flish.</p>
+  </header>
+
+  <section>
+    <h2>Welcome to Flish</h2>
+    <p>Your one-stop destination for innovation and creativity. Join us and explore the future.</p>
+    <button onclick="joinFlish()">Get Started</button>
+  </section>
+
+  <section id="features">
+    <div class="card">
+      <h3>🚀 Speed</h3>
+      <p>Flish is lightning-fast to give you the best experience.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Connectivity</h3>
+      <p>Stay connected with seamless interactions.</p>
+    </div>
+    <div class="card">
+      <h3>🎨 Design</h3>
+      <p>A sleek and modern interface crafted for you.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Flish. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function joinFlish() {
+      alert("Welcome aboard Flish! 🚀");
+    }
+  </script>
+
+</body>
+</html>
