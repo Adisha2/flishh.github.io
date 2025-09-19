@@ -4,29 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flish Labs - Aditi</title>
-  <link rel="icon" type="image/png" href="fl.png" /> <!-- your favicon -->
+  <link rel="icon" type="image/png" href="fl.png" />
   <style>
-
-    <script>
-let lastScrollTop = 0;
-const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-  if (scrollTop > lastScrollTop) {
-    // Scrolling down
-    header.style.opacity = '0';
-    header.style.pointerEvents = 'none'; // prevents clicks while hidden
-  } else {
-    // Scrolling up
-    header.style.opacity = '1';
-    header.style.pointerEvents = 'auto';
-  }
-  
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // for mobile bounce
-});
-</script>
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -41,6 +20,8 @@ window.addEventListener('scroll', () => {
       background: rgba(0, 0, 0, 0.2);
       position: sticky;
       top: 0;
+      transition: top 0.3s ease, opacity 0.3s ease;
+      z-index: 1000;
     }
 
     h1 {
@@ -101,17 +82,6 @@ window.addEventListener('scroll', () => {
 </head>
 <body>
   <header>
-
-    header {
-  padding: 2rem;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  transition: top 0.3s ease, opacity 0.3s ease; /* <-- add this */
-  z-index: 1000; /* ensures header stays on top */
-}
-
     <h1>Flish Labs</h1>
     <p>Experiments • Projects • Playground</p>
   </header>
@@ -174,6 +144,29 @@ window.addEventListener('scroll', () => {
   <footer>
     <p>© 2025 Flish Labs - Aditi</p>
   </footer>
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // scrolling down
+        header.style.opacity = '0';
+        header.style.pointerEvents = 'none';
+      } else {
+        // scrolling up
+        header.style.opacity = '1';
+        header.style.pointerEvents = 'auto';
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
 </body>
 </html>
+
+
 
