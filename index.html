@@ -7,6 +7,27 @@
   <link rel="icon" type="image/png" href="fl.png" /> <!-- your favicon -->
   <style>
     body {
+      <script>
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    header.style.opacity = '0';
+    header.style.pointerEvents = 'none'; // prevents clicks while hidden
+  } else {
+    // Scrolling up
+    header.style.opacity = '1';
+    header.style.pointerEvents = 'auto';
+  }
+  
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // for mobile bounce
+});
+</script>
+
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #4facfe, #00f2fe);
@@ -80,6 +101,17 @@
 </head>
 <body>
   <header>
+
+    header {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  transition: top 0.3s ease, opacity 0.3s ease; /* <-- add this */
+  z-index: 1000; /* ensures header stays on top */
+}
+
     <h1>Flish Labs</h1>
     <p>Experiments • Projects • Playground</p>
   </header>
